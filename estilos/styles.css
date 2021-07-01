@@ -1,0 +1,288 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    --verde_kinetik: rgb(104,104,104);
+    --amarillo_kinetik: rgb(251, 199, 1);
+    font-family: 'Lato', sans-serif;
+    /*background: var(--verde_kinetik);*/
+    background-image: url(../imagenes/Roto.jpg);
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+/*---------------------------- NAV BAR -------------------------------*/
+
+.barra_navegacion{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    /*background-color: var(--verde_kinetik);*/
+    background-image: linear-gradient(var(--verde_kinetik),transparent);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}
+
+.barra_navegacion ul li{
+    padding: 10px;
+    display: inline; 
+    cursor: pointer;
+    color: var(--amarillo_kinetik);
+    font-weight: bold;
+}
+
+.barra_navegacion a{
+    height: 100%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.barra_navegacion a img{
+    border-radius: 50%;
+}
+
+.barra_navegacion a:hover{
+    height: 110%;
+    width: 40px;
+    display: flex;
+}
+
+.barra_navegacion li:hover{
+    color: rgb(157, 255, 0);
+    font-size: 1.1rem;
+    transition-duration: 0.5s;
+}
+
+
+/*---------------------------- CONTENEDOR DE IMAGNES -------------------------------*/
+
+.contenedor_imagenes{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: var(--verde_kinetik);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%);
+    /*background-image: url(../imagenes/parkour.jpg);*/
+    background-size: cover;
+    background-position: 50% 0%;
+}
+
+.contenedor_imagenes .images{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: var(--amarillo_kinetik);
+}
+
+.contenedor_imagenes .images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*---------------------QUIENES SOMOS----------------------*/
+
+.quienes_somos{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background: var(--verde_kinetik);*/
+}
+
+.contenedor_quienes_somos{
+    position: relative;
+    display: flex;
+    top: -10%;
+    padding: 1.8rem;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0 25%, 100% 11%, 91% 93%, 0 85%);
+    background-color: var(--amarillo_kinetik);
+}
+
+.cuadrado_contenedor h2{
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+.cuadrado_contenedor{
+    position: relative;
+    width: 100%;
+    font-size: 1.27rem;
+}
+
+@media (max-width: 745px){
+    .cuadrado_contenedor h2{
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+    
+    .cuadrado_contenedor{
+        position: relative;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+}
+
+/*---------------------SLIDER----------------------*/
+.row{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.row .imgclases{
+    width: 25%;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    top: -30px;
+    right: 0;
+}
+
+.row .imgclases img{
+    transform: rotate(18deg);
+    width: 100%;
+    height: 100%;
+}
+
+
+.carousel{
+    /*background: var(--amarillo_kinetik);*/
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 92%);*/
+    clip-path: polygon(0 0, 100% 12%, 100% 100%, 0% 100%);
+}
+
+.carousel .carousel-item{
+    display: flex;
+    height: 450px !important; /*Esto es una mala practica*/
+    width: 450px !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.carousel .carousel-item img{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+}
+
+/*--------------------------CONTACTO-------------------------------*/
+
+.contenedor_contacto{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.grid_contacto{    
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    color: #ffff;
+    padding: 1.2rem;
+}
+
+.formulario{
+    background-color: rgb(93, 93, 99);
+    align-items: center;
+    padding: 2rem;
+}
+
+.informacionkik{
+    background-color: rgb(72, 64, 64);
+    padding: 2rem;
+}
+
+.formulario form button,
+.formulario form input,
+.formulario form textarea{
+    width: 100%;
+    padding: .7em;
+    border: none;
+    /*background-color: transparent;*/
+    border-bottom: 1px solid var(--verde_kinetik);
+    outline: none;
+    color: #ffff;
+}
+
+.formulario form button{
+    background-color: rgb(24, 15, 15);  
+}
+
+.formulario form button:hover{
+    background-color: rgb(118, 34, 34);  
+    cursor: pointer;
+}
+
+.formulario form textarea{
+    background: rgba(110, 110, 117, 0.33);
+    resize: none;
+    height: 90px;
+}
+
+.informacionkik h4{
+    margin-bottom: 15px;
+}
+
+.informacion_con_logo{
+    margin-bottom: 15px;
+}
+
+
+@media (max-width: 900px){
+    .grid_contacto{    
+        grid-template-columns: 1fr;
+        grid-template-rows: 2;
+    }
+}
+
+/*-------------------------FOOTER------------------------------*/
+
+footer{
+    width: 100%;
+    height: 100px;
+    background: #000;
+}
+
+.divfooter{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    color: var(--amarillo_kinetik);
+}
+
+.divfooter h3{
+    font-weight: bold;
+}
+
+.divfooter p{
+    text-align: right;
+}

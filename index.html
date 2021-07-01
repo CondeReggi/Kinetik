@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+
+    <!-- MATERIALIZE (Solo con internet. proximamente hay que ponerlo bien)-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    <link  rel="icon"   href="imagenes/logo_kinetik.jpg" type="image/png" />
+    <title>KINETIK</title>
+</head>
+<body>
+    <a name="inicio"></a>
+    <div class="barra_navegacion">
+        <a href="#inicio">
+            <img src="imagenes/logo_kinetik.jpg" alt="logo-kinetik">
+        </a>
+        <ul>
+            <li id="liinicio" onclick="location.href='#inicio'">INICIO</li>
+            <li id="liclases" onclick="location.href='#clasess'">CLASES</li>
+            <li id="licontacto" onclick="location.href='#contactanos'">CONTACTO</li>
+        </ul>
+    </div>
+
+    <div class="contenedor_imagenes">
+
+    </div>
+        
+    <div class="quienes_somos">
+        <div class="contenedor_quienes_somos">
+            <div class="cuadrado_contenedor">
+                <h2>¿Quienes somos?</h2>
+                <p>Entrená y desarrollá tus habilidades acrobaticas en el espacio mejor equipado y con los mejores profesores de Montevideo.</p>
+                <a href=""> Mas informacion </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARRUSEL -->
+    <a name="clasess"></a>
+    <div class="container">
+        <div class="row">
+            <div class="imgclases">
+                <img src="imagenes/Texto_clases.png" alt="logo_clases">
+            </div>
+            <div class="col s12">
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <a href="https://www.instagram.com/p/CDKOi4kpdJH/" name="clases"> <img src="imagenes/slider/ACRO INTRO.jpg" alt="Acro intro"> </a>                        
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.instagram.com/p/CDKPMIKpHCj/" name="clases"> <img src="imagenes/slider/ACROBACIAS.jpg" alt="Acrobacias"> </a>                        
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.instagram.com/p/CDKQR_gJhEP/" name="clases"> <img src="imagenes/slider/HANDSTAND.jpg" alt="handstand paro de mano"> </a>                        
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.instagram.com/p/CDKQAD0pro5/" name="clases"> <img src="imagenes/slider/MOVILIDAD Y FLEX.jpg" alt="movilidad y flexibilidad"> </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.instagram.com/p/CDKPuN3p_ZK/" name="clases"> <img src="imagenes/slider/PARKOUR.jpg" alt="parkour freerunning"> </a>                        
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.instagram.com/p/CDKN-LkpW47/" > <img src="imagenes/slider/TRICKING.jpg" alt="tricking mortales"> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACTANOS -->
+    <a name="contactanos"></a>
+
+    <div class="contenedor_contacto">
+        <div class="container grid_contacto">
+            <div class="formulario ">
+                <form action="" class="formulario" id="formulario">
+                    <p>
+                        <label id="nombrelbl"> Nombre Completo </label>
+                        <input  type="text" name="usuario"  id="nombreid" required>                 
+                    </p>
+                    <p>
+                        <label id="maillbl"> Email </label>
+                        <input type="text" name="Email"  id="mailid" required>
+                    </p>
+                    <p>
+                        <label id="tellbl"> Telefono </label>
+                        <input type="text" name="Telefono"  id="telid" required>
+                    </p>
+                    <p>
+                        <label id="msglbl"> Mensaje </label>
+                        <textarea name="Mensaje" id="msgid" required></textarea>
+                    </p>
+                    <p>
+                        <button type="submit" id="botonenviar" name="botonenviar">
+                            Enviar   
+                        </button>
+                    </p>
+                </form>
+            </div>
+
+            <div class="informacionkik">
+                <h4>Puedes contactarnos aqui</h4>
+                <div class="informacion_con_logo">
+                    <p><a href="https://www.instagram.com/kinetikuy/"><b>Instagram</b></a></p>
+                    <p>@kinetikuy</p>
+                </div>
+                <div class="informacion_con_logo">
+                    <p><a href="https://www.facebook.com/kinetikuy"><b>Facebook</b></a></p>
+                    <p>Kinetik</p>
+                </div>
+                <div class="informacion_con_logo">
+                    <p><a href=""><b>Mail de contacto</b></a></p>
+                    <p>kinetikcontacto@hotmail.com</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="divfooter container">
+            <h3>KINETIK</h3>
+            <p>Kinetik, primier gimasio de parkour del Uruguay. <br><small>&copy; Copyright 2021, Lucas Conde - Developer</small> 
+            </p>
+        </div>
+    </footer>
+
+    <!-- MATERIALIZE JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="javascript/app.js"></script>
+    <script src="javascript/slider.js"></script>
+</body>
+</html>
